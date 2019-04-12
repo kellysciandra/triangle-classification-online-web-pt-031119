@@ -10,7 +10,7 @@ class Triangle
   end
 
 def kind
-  binding.pry
+ 
   @triangle_sides.each do |x|
   if ((x[1] == x[2]) && (x[1] == x[3]) && (x[2] == x[3]))
     return :equilateral
