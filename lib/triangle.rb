@@ -10,7 +10,7 @@ class Triangle
   end
 
 def kind
-  @triangle.each do |x| 
+  @triangle.map do |x| 
  return :poop if x.any? <= 0 or x[0] + x[1] <= x[2]
   return :equilateral if x[0] == x[2]
   return :isosceles if x[0] == x[1] or x[1] == x[2]
