@@ -16,9 +16,9 @@ def kind
      :equilateral
     
   elsif ((side[1] == side[2]) || (side[1] == side[3]) || (side[2] == side[3]))
-    return :isosceles
+     :isosceles
   elsif
-      puts :scalene
+     :scalene
     else
       raise TriangleError
    
