@@ -12,11 +12,14 @@ class Triangle
 def kind
  
   @triangle_sides.map do |side|
-    if ((side[0] == side[1]) && (side[0] == side[2]) && (side[1] == side[2]))
-      binding.pry
-      return :equilateral
-   elsif ((side[0] == side[1]) || (side[0] == side[2]) || (side[1] == side[2]))
+    if ((side[0] == side[1]) || (side[0] == side[2]) || (side[1] == side[2]))
       return :isosceles
+      
+     
+   elsif 
+    ((side[0] == side[1]) && (side[0] == side[2]) && (side[1] == side[2]))
+
+      return :equilateral
    elsif
      :scalene
     else
