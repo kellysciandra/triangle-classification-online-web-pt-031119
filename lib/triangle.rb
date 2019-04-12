@@ -11,11 +11,11 @@ class Triangle
 
 def kind
  
-  @triangle_sides.map do |x|
-  if ((x[1] == x[2]) && (x[1] == x[3]) && (x[2] == x[3]))
+  @triangle_sides.map do |side|
+  if ((side[1] == side[2]) && (side[1] == side[3]) && (side[2] == side[3]))
     return :equilateral
     
-  elsif ((x[1] == x[2]) || (x[1] == x[3]) || (x[2] == x[3]))
+  elsif ((side[1] == side[2]) || (side[1] == side[3]) || (side[2] == side[3]))
     return :isosceles
   elsif
       puts :scalene
