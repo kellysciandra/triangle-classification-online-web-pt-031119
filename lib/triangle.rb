@@ -10,19 +10,11 @@ class Triangle
   end
 
 def kind
- 
-  @triangle_sides.map do |side|
-    if ((side[0] == side[1]) || (side[0] == side[2]) || (side[1] == side[2]))
-      return :isosceles
-   elsif 
-    ((side[0] == side[1]) && (side[0] == side[2]) && (side[1] == side[2]))
-      return :equilateral
-   elsif
-     :scalene
-    else
-      raise TriangleError
-    end 
-  end
+  a, b, c = @@triangle.sort
+  raise TriangleError if a <= 0 or a + b <= c
+  return :equilateral if a == c
+  return :isosceles if a == b or b == c
+  return :scalene
 end
 
     
