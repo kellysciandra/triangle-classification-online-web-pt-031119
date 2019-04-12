@@ -11,9 +11,9 @@ class Triangle
 
 def kind
   @triangle.each do |x| 
-  raise TriangleError if a <= 0 or a + b <= c
-  return :equilateral if a == c
-  return :isosceles if a == b or b == c
+  raise TriangleError if x.any? <= 0 or x[0] + x[1] <= x[2]
+  return :equilateral if x[0] == x[2]
+  return :isosceles if x[0] == x[1] or x[1] == x[2]
   return :scalene
 end
 
